@@ -1,0 +1,103 @@
+{
+  "name": "eastlink-market",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ethiopia's premier e-commerce platform connecting local sellers and buyers",
+  "keywords": ["e-commerce", "ethiopia", "marketplace", "react", "node.js", "mongodb"],
+  "author": "EastLink Market Team",
+  "license": "MIT",
+  "homepage": "https://eastlinkmarket.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/eastlink-market.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/eastlink-market/issues"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "vite",
+    "server": "nodemon backend/server.js",
+    "build": "vite build",
+    "build:server": "echo 'Server build complete'",
+    "start": "node backend/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "deploy": "npm run build && npm run build:server",
+    "test": "echo 'Tests will be added soon'",
+    "test:watch": "echo 'Test watch mode will be added soon'",
+    "test:coverage": "echo 'Test coverage will be added soon'",
+    "logs": "mkdir -p logs && echo 'Logs directory created'",
+    "docker:build": "docker build -t eastlink-market .",
+    "docker:run": "docker run -p 5000:5000 eastlink-market",
+    "docker:dev": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "vercel:deploy": "vercel --prod",
+    "vercel:env": "vercel env pull .env.local"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.21.0",
+    "lucide-react": "^0.344.0",
+    "axios": "^1.6.2",
+    "js-cookie": "^3.0.5",
+    "react-query": "^3.39.3",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "morgan": "^1.10.0",
+    "winston": "^3.11.0",
+    "nodemailer": "^6.9.7",
+    "express-mongo-sanitize": "^2.2.0",
+    "compression": "^1.7.4",
+    "express-session": "^1.17.3",
+    "connect-mongo": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/js-cookie": "^3.0.6",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2",
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
